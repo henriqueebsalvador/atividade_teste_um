@@ -4,13 +4,19 @@ session_start();
 $host = "localhost";
 $user = "root";
 $pass = "root";
-$db = "sistema_simples7"
+$db = "sistema_simples7";
 
 $conn = new mysqli($host,$user,$pass,$db);
-if ($conn->connect_error) {
-    die("Conexão falhou: " . $connp->connect_error)
-}
+if ($conn -> connect_error) {
+    die("Conexão falhou: " . $conn -> connect_error);
+}else{
+    echo "<p> Banco: OK! </p>";
+};
 
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+    $usuario = $_POST["usuario"];
+    $senha = $_POST["senha"];
+}
 
 
 ?>
