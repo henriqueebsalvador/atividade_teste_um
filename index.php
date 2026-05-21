@@ -1,3 +1,20 @@
+<?php
+session_start();
+
+$host = "localhost";
+$user = "root";
+$pass = "root";
+$db = "sistema_simples7"
+
+$conn = new mysqli($host,$user,$pass,$db);
+if ($conn->connect_error) {
+    die("Conexão falhou: " . $connp->connect_error)
+}
+
+
+
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,14 +26,13 @@
         Login com PHP
     </h2>
         <form method="POST">
-            <label for="usuario">usuario</label>
+            <label for="usuario">Usuario</label>
             <input type="text" name="usuario">
-
             <br><br>
-
             <label for="senha">Senha</label>
             <input type="password" name="senha">
-            
+            <br><br>
+            <button type="submit">Enviar</button>
         </form>
 </body>
 </html>
